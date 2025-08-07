@@ -85,6 +85,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "commission",
 				"outputs": [
 					{
@@ -187,6 +200,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -217,11 +237,11 @@
 	},
 	"sources": {
 		"smart-contract/LinkPay.sol": {
-			"keccak256": "0xd2a3f831cde2aed89432e73abb173d3b4e96bcc8cccbcdce247356ec03da8654",
+			"keccak256": "0xe39da185c96ee3d4e87b93fbd14ebeceb46492ced41a2e04771c6887c8d6401f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d6ab1b82742c0110929f6b93944f3971954d488ddb1edd9f6ff90673b8c6b328",
-				"dweb:/ipfs/QmexaFC4A2e2GrDFT8hB5naJDiAWPY9zkR6wwSWARTRZ4Q"
+				"bzz-raw://e5ffb5aa08efee4f905afd6d1c0ce1f46f9ddd9e8f6a07219608c524f51d95a1",
+				"dweb:/ipfs/QmZwi3sLBw7h4ULWZw3y5iKoRe3PYZT6cVZCGknuBWErtr"
 			]
 		}
 	},

@@ -10,6 +10,8 @@ contract LinkPay {
 
     uint256 public commission = 1 wei;
     address public immutable platformOwner;
+    address public immutable admin;
+
 
     mapping(string => Link) private links;
     mapping(string => mapping(address => bool)) public hasAccess;
@@ -24,6 +26,7 @@ contract LinkPay {
 
     constructor() {
         platformOwner = msg.sender;
+        admin = msg.sender;
     }
 
     function addLink(string calldata url, string calldata linkId, uint256 fee) external {
@@ -74,7 +77,12 @@ contract LinkPay {
             return ("", link.owner, link.fee);
         }
     }
-
+    
+    function withdraw() public {
+        require(msg.sender == admin, "You do not have permission");
+        uint256 amount = address(this).balance;
+        payable(admin).transfer(amount);
+    }
     // Opcional: para o dono do contrato mudar a comissão
     function setCommission(uint256 newCommission) external {
         require(msg.sender == platformOwner, "Only platform owner");
