@@ -2,7 +2,7 @@ import Web3 from "web3";
 
 import ABI from "./ABI.json";
 
-const CONTRACT_ADDRESS = "XXXXX";
+const CONTRACT_ADDRESS = "XXXXxXXXXXXXXXXXXXXX"; // Substitua pelo endereço do seu contrato
 
 interface AddLinkParams {
   url: string;

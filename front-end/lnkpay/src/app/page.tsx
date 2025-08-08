@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         <div className="col-6">
           <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-            LinkShield
+            lnkPay
           </h1>
           <p className="lead">Proteja seus links. Lucre com eles.</p>
           <hr />
