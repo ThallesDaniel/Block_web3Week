@@ -1,4 +1,5 @@
 import Web3 from "web3";
+
 import ABI from "./ABI.json";
 
 const CONTRACT_ADDRESS = "XXXXX";

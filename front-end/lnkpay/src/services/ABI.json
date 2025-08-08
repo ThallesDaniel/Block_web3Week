@@ -7,6 +7,56 @@
       "type":"constructor"
    },
    {
+      "anonymous":false,
+      "inputs":[
+         {
+            "indexed":true,
+            "internalType":"string",
+            "name":"linkId",
+            "type":"string"
+         },
+         {
+            "indexed":true,
+            "internalType":"address",
+            "name":"user",
+            "type":"address"
+         },
+         {
+            "indexed":false,
+            "internalType":"uint256",
+            "name":"amount",
+            "type":"uint256"
+         }
+      ],
+      "name":"LinkAccessPaid",
+      "type":"event"
+   },
+   {
+      "anonymous":false,
+      "inputs":[
+         {
+            "indexed":true,
+            "internalType":"string",
+            "name":"linkId",
+            "type":"string"
+         },
+         {
+            "indexed":true,
+            "internalType":"address",
+            "name":"owner",
+            "type":"address"
+         },
+         {
+            "indexed":false,
+            "internalType":"uint256",
+            "name":"fee",
+            "type":"uint256"
+         }
+      ],
+      "name":"LinkAdded",
+      "type":"event"
+   },
+   {
       "inputs":[
          {
             "internalType":"string",
@@ -72,26 +122,19 @@
       "name":"getLink",
       "outputs":[
          {
-            "components":[
-               {
-                  "internalType":"string",
-                  "name":"url",
-                  "type":"string"
-               },
-               {
-                  "internalType":"address",
-                  "name":"owner",
-                  "type":"address"
-               },
-               {
-                  "internalType":"uint256",
-                  "name":"fee",
-                  "type":"uint256"
-               }
-            ],
-            "internalType":"struct LinkShield.Link",
-            "name":"",
-            "type":"tuple"
+            "internalType":"string",
+            "name":"url",
+            "type":"string"
+         },
+         {
+            "internalType":"address",
+            "name":"owner",
+            "type":"address"
+         },
+         {
+            "internalType":"uint256",
+            "name":"fee",
+            "type":"uint256"
          }
       ],
       "stateMutability":"view",
@@ -134,6 +177,36 @@
          
       ],
       "stateMutability":"payable",
+      "type":"function"
+   },
+   {
+      "inputs":[
+         
+      ],
+      "name":"platformOwner",
+      "outputs":[
+         {
+            "internalType":"address",
+            "name":"",
+            "type":"address"
+         }
+      ],
+      "stateMutability":"view",
+      "type":"function"
+   },
+   {
+      "inputs":[
+         {
+            "internalType":"uint256",
+            "name":"newCommission",
+            "type":"uint256"
+         }
+      ],
+      "name":"setCommission",
+      "outputs":[
+         
+      ],
+      "stateMutability":"nonpayable",
       "type":"function"
    },
    {

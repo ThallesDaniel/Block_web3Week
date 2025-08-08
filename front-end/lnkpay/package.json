@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "next": "15.4.6",
+    "object-hash": "^3.0.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "web3": "^4.16.0"
   },
   "devDependencies": {
     "@types/node": "^20",
